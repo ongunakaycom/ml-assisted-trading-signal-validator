@@ -59,19 +59,28 @@ LLM layers provide enrichment and veto. No model owns state.
 
 ## 📚 Documentation
 
-- `architecture.md` — Pipeline stages, gate logic, data flow
-- `whale-engine.md` — 13 detection methods, direction taxonomy
-- `risk-management.md` — Multi-timeframe rule, fail-safe, session memory
-- `signal-quality.md` — Signal quality overhaul (public summary)
-- `ml-pipeline.md` — Model metrics, failure detection, retraining cadence
-- `performance.md` — Live stats, top instruments, weekly snapshots
-- `engineering-notes.md` — Trade-offs, lessons learned
+| Document | Contents |
+|----------|----------|
+| [architecture.md](architecture.md) | Pipeline stages, gate logic, data flow, state model, failure modes |
+| [whale-engine.md](whale-engine.md) | 13 detection methods, direction taxonomy, aggregation logic |
+| [risk-management.md](risk-management.md) | Multi-timeframe rule, fail-safe defaults, session memory, read-only config |
+| [signal-quality.md](signal-quality.md) | The 10-fix overhaul that stabilised signal quality |
+| [ml-pipeline.md](ml-pipeline.md) | Model metrics, failure detection, retraining cadence |
+| [performance.md](performance.md) | Live stats, top instruments, weekly snapshots |
+| [engineering-notes.md](engineering-notes.md) | Trade-offs, lessons learned, stack summary |
 
 ---
 
 ## 📜 License
 
-MIT — see LICENSE.
+MIT — see [LICENSE](LICENSE).
 
 **Author:** Ongun Akay
 **Status:** ✅ Live in production
+
+---
+
+⚠️ **Source code is private.** This repository documents architecture 
+and design decisions only. The implementation, scoring weights, ML 
+model artifacts, and LLM system prompt are kept in a private repo to 
+protect the trading edge.
