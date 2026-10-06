@@ -1,0 +1,27 @@
+@"
+# Environment (ASLA commit etme)
+.env
+.env.*
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Data
+data/*.csv
+data/*.json
+logs/
+trading_bot.log
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+"@ | Out-File -Encoding utf8 .gitignore
+
+Write-Host "✅ .gitignore oluşturuldu" -ForegroundColor Green

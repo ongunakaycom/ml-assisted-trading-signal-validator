@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ongun Akay — ML Trading Signal Validator</title>
+    <meta name="description" content="Production-grade real-time signal engine. 88% success, 14.75x profit factor.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ML-Assisted Trading Signal Validator</h1>
+            <p class="subtitle">Production-grade real-time signal engine for liquid markets</p>
+            <div class="badges">
+                <span class="badge badge-live">✅ Live in Production</span>
+                <span class="badge">Coinbase Advanced Spot</span>
+                <span class="badge">Python 3.11 · asyncio</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="metrics container">
+            <div class="metric-card"><h3>991</h3><p>Total Signals</p></div>
+            <div class="metric-card"><h3>88.0%</h3><p>Success Rate</p></div>
+            <div class="metric-card"><h3>14.75x</h3><p>Profit Factor</p></div>
+            <div class="metric-card"><h3>+1778%</h3><p>Total Profit</p></div>
+        </section>
+
+        <section class="container">
+            <h2>What it does</h2>
+            <p class="lead">A multi-timeframe scanner that identifies accumulation phases in liquid markets before breakout, combining:</p>
+            <ul class="features">
+                <li>Order-book microstructure analysis <strong>(13 detection methods)</strong></li>
+                <li>Multi-timeframe trend alignment <strong>(1D + 1H + 15m EMA200)</strong></li>
+                <li>Volume regime classification <strong>(dry-up / spike / accumulation)</strong></li>
+                <li>ML-based failure prediction <strong>(XGBoost · ROC-AUC 0.946)</strong></li>
+                <li>LLM risk validation <strong>(Gemini · 7-step checklist · fail-safe decline)</strong></li>
+            </ul>
+            <p class="principle"><strong>Design principle:</strong> Deterministic gate logic owns the decision. ML and LLM layers provide enrichment and veto. No model owns state.</p>
+        </section>
+
+        <section class="container">
+            <h2>Live Performance</h2>
+            <table class="perf-table">
+                <tbody>
+                    <tr><td>Total signals</td><td>991</td></tr>
+                    <tr><td>Success rate</td><td>88.0%</td></tr>
+                    <tr><td>Profit factor</td><td>14.75x</td></tr>
+                    <tr><td>Avg profit per signal</td><td>+1.79%</td></tr>
+                    <tr><td>Total profit</td><td>+1778.51%</td></tr>
+                    <tr><td>Failure recall (XGBoost)</td><td>94.4% (17/18)</td></tr>
+                    <tr><td>Success specificity</td><td>86.3%</td></tr>
+                    <tr><td>ROC-AUC</td><td>0.946</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="container">
+            <h2>Screenshots</h2>
+            <div class="gallery">
+                <figure><img src="assets/screenshots/signal.png" alt="Signal Example"><figcaption>Signal detection</figcaption></figure>
+                <figure><img src="assets/screenshots/telegram.png" alt="Telegram Alert"><figcaption>Telegram alert</figcaption></figure>
+                <figure><img src="assets/screenshots/performance.png" alt="Performance"><figcaption>Performance metrics</figcaption></figure>
+                <figure><img src="assets/screenshots/architecture.png" alt="Architecture"><figcaption>Pipeline architecture</figcaption></figure>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2>Documentation</h2>
+            <ul class="docs-list">
+                <li><a href="../architecture.md">architecture.md</a> — Pipeline stages, gate logic, data flow, state model, failure modes</li>
+                <li><a href="../whale-engine.md">whale-engine.md</a> — 13 detection methods, direction taxonomy, aggregation logic</li>
+                <li><a href="../risk-management.md">risk-management.md</a> — Multi-timeframe rule, fail-safe defaults, session memory</li>
+                <li><a href="../ml-pipeline.md">ml-pipeline.md</a> — Model metrics, failure detection, retraining cadence</li>
+                <li><a href="../performance.md">performance.md</a> — Live stats, top instruments, weekly snapshots</li>
+                <li><a href="../signal-quality.md">signal-quality.md</a> — The 10-fix overhaul that stabilised signal quality</li>
+                <li><a href="../engineering-notes.md">engineering-notes.md</a> — Trade-offs, lessons learned, stack summary</li>
+            </ul>
+        </section>
+
+        <section class="container cta">
+            <a href="https://github.com/ongunakaycom/ml-assisted-trading-signal-validator" class="btn">View Documentation on GitHub →</a>
+            <p class="note">⚠️ Source code is private. This page documents architecture and design decisions only.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Ongun Akay · MIT License · <a href="https://github.com/ongunakaycom">GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
