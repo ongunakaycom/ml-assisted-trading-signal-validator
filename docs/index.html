@@ -12,6 +12,9 @@
     <!-- Bootstrap Icons (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
+    <!-- Fancybox 5 CSS (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+
     <!-- Custom overrides -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -134,15 +137,24 @@
             </div>
         </section>
 
-        <!-- ===== SCREENSHOTS ===== -->
+        <!-- ===== SCREENSHOTS (FANCYBOX ENABLED) ===== -->
         <section class="my-5">
             <h2 class="section-title mb-4">
                 <i class="bi bi-images me-2 text-info"></i>Screenshots
             </h2>
+            <p class="text-secondary small mb-4">
+                <i class="bi bi-zoom-in me-1"></i>Click any image to zoom in.
+            </p>
             <div class="row g-3">
                 <div class="col-12 col-sm-6 col-lg-3">
                     <figure class="card screenshot-card h-100">
-                        <img src="assets/screenshots/signal.png" class="card-img-top" alt="Signal Example">
+                        <a href="assets/screenshots/signal.png"
+                           data-fancybox="screenshots"
+                           data-caption="Signal detection">
+                            <img src="assets/screenshots/signal.png"
+                                 class="card-img-top"
+                                 alt="Signal detection">
+                        </a>
                         <figcaption class="card-body text-center text-secondary small">
                             Signal detection
                         </figcaption>
@@ -150,7 +162,13 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3">
                     <figure class="card screenshot-card h-100">
-                        <img src="assets/screenshots/telegram.png" class="card-img-top" alt="Telegram Alert">
+                        <a href="assets/screenshots/telegram.png"
+                           data-fancybox="screenshots"
+                           data-caption="Telegram alert">
+                            <img src="assets/screenshots/telegram.png"
+                                 class="card-img-top"
+                                 alt="Telegram alert">
+                        </a>
                         <figcaption class="card-body text-center text-secondary small">
                             Telegram alert
                         </figcaption>
@@ -158,7 +176,13 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3">
                     <figure class="card screenshot-card h-100">
-                        <img src="assets/screenshots/performance.png" class="card-img-top" alt="Performance">
+                        <a href="assets/screenshots/performance.png"
+                           data-fancybox="screenshots"
+                           data-caption="Performance metrics">
+                            <img src="assets/screenshots/performance.png"
+                                 class="card-img-top"
+                                 alt="Performance metrics">
+                        </a>
                         <figcaption class="card-body text-center text-secondary small">
                             Performance metrics
                         </figcaption>
@@ -166,7 +190,13 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3">
                     <figure class="card screenshot-card h-100">
-                        <img src="assets/screenshots/architecture.png" class="card-img-top" alt="Architecture">
+                        <a href="assets/screenshots/architecture.png"
+                           data-fancybox="screenshots"
+                           data-caption="Pipeline architecture">
+                            <img src="assets/screenshots/architecture.png"
+                                 class="card-img-top"
+                                 alt="Pipeline architecture">
+                        </a>
                         <figcaption class="card-body text-center text-secondary small">
                             Pipeline architecture
                         </figcaption>
@@ -240,5 +270,34 @@
 
     <!-- Bootstrap JS (CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Fancybox 5 JS (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <!-- Fancybox init -->
+    <script>
+        Fancybox.bind("[data-fancybox='screenshots']", {
+            // Group all screenshots so left/right arrows navigate
+            groupAll: true,
+            // Show toolbar (zoom, slideshow, fullscreen, close)
+            Toolbar: {
+                display: {
+                    left:   ["infobar"],
+                    middle: [],
+                    right:  ["zoom", "fullscreen", "close"]
+                }
+            },
+            // Enable image zoom with mouse wheel
+            Images: {
+                zoom: true,
+            },
+            // Animated transition
+            animated: true,
+            // Show caption from data-caption
+            caption: function (fancybox, slide) {
+                return slide.triggerEl?.dataset?.caption || "";
+            }
+        });
+    </script>
 </body>
 </html>
