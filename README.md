@@ -253,22 +253,6 @@ Every approved signal is pushed to Telegram with:
 
 ---
 
-## 🛣️ Roadmap
-
-- [x] Coinbase Advanced Spot integration
-- [x] 13-method whale engine
-- [x] Multi-timeframe trend alignment
-- [x] XGBoost failure predictor
-- [x] Gemini LLM risk validation
-- [x] Telegram alerts
-- [x] 88% success rate · 14.75x profit factor
-- [ ] Multi-exchange support (Binance, Kraken)
-- [ ] Backtesting framework
-- [ ] Web dashboard for signal history
-- [ ] On-chain data integration
-
----
-
 ## 👤 Author
 
 **Ongun Akay** — Senior Cloud & AI Engineer
