@@ -63,7 +63,7 @@ A multi-timeframe scanner that identifies accumulation phases in liquid markets 
 │                                                                 │
 │  ┌──────────────────────────────────────────────────────────┐   │
 │  │  Trend Alignment Gate                                    │   │
-│  │  └── 1D + 1H + 15m EMA200 confluence                      │   │
+│  │  └── 1D + 1H + 15m EMA200 confluence                     │   │
 │  └──────────────────────────────────────────────────────────┘   │
 │                                                                 │
 │  ┌──────────────────────────────────────────────────────────┐   │
